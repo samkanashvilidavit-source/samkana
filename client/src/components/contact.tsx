@@ -204,45 +204,57 @@ export default function Contact() {
                       ))}
                     </div>
                   ) : (
-                    <div className="space-y-8">
-                      <div className="flex items-start space-x-4">
+                    <div className="space-y-6">
+                      {/* Address Row */}
+                      <div className="grid grid-cols-5 gap-4 items-start">
                         <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
                           <MapPin className="text-white w-5 h-5" />
                         </div>
-                        <div>
-                          <h4 className="font-dm-serif font-semibold text-white mb-2">მისამართი</h4>
+                        <div className="col-span-1">
+                          <h4 className="font-dm-serif font-semibold text-white">მისამართი</h4>
+                        </div>
+                        <div className="col-span-3">
                           <p className="text-neutral leading-relaxed">
                             {cafeInfo?.addressKa || "რუსთაველის გამზირი 123, თბილისი 0108, საქართველო"}
                           </p>
                         </div>
                       </div>
                       
-                      <div className="flex items-start space-x-4">
+                      {/* Email Row */}
+                      <div className="grid grid-cols-5 gap-4 items-start">
                         <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
                           <Mail className="text-white w-5 h-5" />
                         </div>
-                        <div>
-                          <h4 className="font-dm-serif font-semibold text-white mb-2">ელ. ფოსტა</h4>
+                        <div className="col-span-1">
+                          <h4 className="font-dm-serif font-semibold text-white">ელ. ფოსტა</h4>
+                        </div>
+                        <div className="col-span-3">
                           <p className="text-neutral">{cafeInfo?.email || "info@chococu.ge"}</p>
                         </div>
                       </div>
                       
-                      <div className="flex items-start space-x-4">
+                      {/* Phone Row */}
+                      <div className="grid grid-cols-5 gap-4 items-start">
                         <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
                           <Phone className="text-white w-5 h-5" />
                         </div>
-                        <div>
-                          <h4 className="font-dm-serif font-semibold text-white mb-2">ტელეფონი</h4>
+                        <div className="col-span-1">
+                          <h4 className="font-dm-serif font-semibold text-white">ტელეფონი</h4>
+                        </div>
+                        <div className="col-span-3">
                           <p className="text-neutral">{cafeInfo?.phone || "+995 322 12 34 56"}</p>
                         </div>
                       </div>
                       
-                      <div className="flex items-start space-x-4">
+                      {/* Working Hours Row */}
+                      <div className="grid grid-cols-5 gap-4 items-start">
                         <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
                           <Clock className="text-white w-5 h-5" />
                         </div>
-                        <div>
-                          <h4 className="font-dm-serif font-semibold text-white mb-2">სამუშაო საათები</h4>
+                        <div className="col-span-1">
+                          <h4 className="font-dm-serif font-semibold text-white">სამუშაო საათები</h4>
+                        </div>
+                        <div className="col-span-3">
                           <div className="text-neutral space-y-1">
                             {cafeInfo?.hoursKa ? (
                               Object.entries(parseHours(cafeInfo.hoursKa)).map(([day, hours]) => (
