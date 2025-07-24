@@ -30,7 +30,7 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <div className="glass-card rounded-2xl p-8 md:p-10">
-              <h2 className="text-4xl md:text-5xl font-inter font-bold text-accent mb-8">
+              <h2 className="text-4xl md:text-5xl font-dm-serif font-bold text-accent mb-8">
                 {SECTIONS.about.title}
               </h2>
               <div className="w-16 h-1 bg-secondary mb-8"></div>
@@ -58,7 +58,7 @@ export default function About() {
                   
                   <Button 
                     onClick={scrollToContact}
-                    className="bg-primary hover:bg-accent text-primary-foreground px-8 py-4 rounded-full font-inter font-semibold text-lg transition-colors shadow-lg"
+                    className="bg-primary hover:bg-accent text-primary-foreground px-8 py-4 rounded-full font-dm-serif font-semibold text-lg transition-colors shadow-lg"
                     size="lg"
                   >
                     დაგვიკავშირდით დღესვე!

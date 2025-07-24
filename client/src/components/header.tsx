@@ -26,7 +26,7 @@ export default function Header() {
               <Cookie className="text-white text-xl" />
             </div>
             <div>
-              <h1 className="font-inter font-bold text-2xl text-accent">{SITE_NAME}</h1>
+              <h1 className="font-dm-serif font-bold text-2xl text-accent">{SITE_NAME}</h1>
               <p className="text-sm text-muted-foreground font-light">{SITE_TAGLINE}</p>
             </div>
           </div>
@@ -37,13 +37,13 @@ export default function Header() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.href)}
-                className="font-inter font-medium text-muted-foreground hover:text-primary transition-colors"
+                className="font-dm-serif font-medium text-muted-foreground hover:text-primary transition-colors"
               >
                 {item.label}
               </button>
             ))}
             <Button 
-              className="bg-primary text-primary-foreground hover:bg-accent font-inter font-medium"
+              className="bg-primary text-primary-foreground hover:bg-accent font-dm-serif font-medium"
               onClick={() => scrollToSection('#contact')}
             >
               შეკვეთა
@@ -64,13 +64,13 @@ export default function Header() {
                     <button
                       key={item.id}
                       onClick={() => scrollToSection(item.href)}
-                      className="font-inter font-medium text-lg text-muted-foreground hover:text-primary transition-colors text-left"
+                      className="font-dm-serif font-medium text-lg text-muted-foreground hover:text-primary transition-colors text-left"
                     >
                       {item.label}
                     </button>
                   ))}
                   <Button 
-                    className="bg-primary text-primary-foreground hover:bg-accent font-inter font-medium w-full mt-4"
+                    className="bg-primary text-primary-foreground hover:bg-accent font-dm-serif font-medium w-full mt-4"
                     onClick={() => scrollToSection('#contact')}
                   >
                     შეკვეთა

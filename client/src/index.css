@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -56,17 +57,14 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply antialiased bg-background text-foreground;
+    font-family: 'DM Serif Display', serif;
   }
 }
 
 /* Custom styles for Georgian fonts and layout */
-.font-inter {
-  font-family: 'Inter', sans-serif;
-}
-
-.font-roboto {
-  font-family: 'Roboto', sans-serif;
+.font-dm-serif {
+  font-family: 'DM Serif Display', serif;
 }
 
 /* Hover effects for cards */

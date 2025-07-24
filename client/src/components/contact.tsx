@@ -78,7 +78,7 @@ export default function Contact() {
       <section id="contact" className="py-20 bg-gradient-choco">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-inter font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-dm-serif font-bold text-white mb-4">
               {SECTIONS.contact.title}
             </h2>
             <p className="text-neutral text-lg max-w-2xl mx-auto">
@@ -90,7 +90,7 @@ export default function Contact() {
             {/* Contact Form */}
             <Card className="shadow-2xl">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-inter font-bold text-accent mb-6">
+                <h3 className="text-2xl font-dm-serif font-bold text-accent mb-6">
                   შეკითხვები და შეკვეთები
                 </h3>
                 <Form {...form}>
@@ -173,7 +173,7 @@ export default function Contact() {
                     <Button 
                       type="submit" 
                       disabled={contactMutation.isPending}
-                      className="w-full bg-primary hover:bg-accent text-primary-foreground py-4 font-inter font-semibold text-lg"
+                      className="w-full bg-primary hover:bg-accent text-primary-foreground py-4 font-dm-serif font-semibold text-lg"
                       size="lg"
                     >
                       {contactMutation.isPending ? "იგზავნება..." : "გაგზავნა"}
@@ -187,7 +187,7 @@ export default function Contact() {
             <div className="space-y-8">
               <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-inter font-bold text-white mb-6">
+                  <h3 className="text-2xl font-dm-serif font-bold text-white mb-6">
                     ჩვენი მისამართი
                   </h3>
                   
@@ -210,7 +210,7 @@ export default function Contact() {
                           <MapPin className="text-white w-5 h-5" />
                         </div>
                         <div>
-                          <h4 className="font-inter font-semibold text-white mb-1">მისამართი</h4>
+                          <h4 className="font-dm-serif font-semibold text-white mb-1">მისამართი</h4>
                           <p className="text-neutral">
                             {cafeInfo?.addressKa || "რუსთაველის გამზირი 123\nთბილისი 0108, საქართველო"}
                           </p>
@@ -222,7 +222,7 @@ export default function Contact() {
                           <Mail className="text-white w-5 h-5" />
                         </div>
                         <div>
-                          <h4 className="font-inter font-semibold text-white mb-1">ელ. ფოსტა</h4>
+                          <h4 className="font-dm-serif font-semibold text-white mb-1">ელ. ფოსტა</h4>
                           <p className="text-neutral">{cafeInfo?.email || "info@chococu.ge"}</p>
                         </div>
                       </div>
@@ -232,7 +232,7 @@ export default function Contact() {
                           <Phone className="text-white w-5 h-5" />
                         </div>
                         <div>
-                          <h4 className="font-inter font-semibold text-white mb-1">ტელეფონი</h4>
+                          <h4 className="font-dm-serif font-semibold text-white mb-1">ტელეფონი</h4>
                           <p className="text-neutral">{cafeInfo?.phone || "+995 322 12 34 56"}</p>
                         </div>
                       </div>
@@ -242,7 +242,7 @@ export default function Contact() {
                           <Clock className="text-white w-5 h-5" />
                         </div>
                         <div>
-                          <h4 className="font-inter font-semibold text-white mb-1">სამუშაო საათები</h4>
+                          <h4 className="font-dm-serif font-semibold text-white mb-1">სამუშაო საათები</h4>
                           <div className="text-neutral space-y-1">
                             {cafeInfo?.hoursKa ? (
                               Object.entries(parseHours(cafeInfo.hoursKa)).map(([day, hours]) => (
@@ -266,7 +266,7 @@ export default function Contact() {
               {/* Social Media Links */}
               <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-inter font-bold text-white mb-6">
+                  <h3 className="text-2xl font-dm-serif font-bold text-white mb-6">
                     გამოგვყევით
                   </h3>
                   <div className="flex space-x-4">

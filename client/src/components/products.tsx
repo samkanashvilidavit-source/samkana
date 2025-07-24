@@ -37,7 +37,7 @@ export default function Products() {
     <section id="products" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-inter font-bold text-accent mb-4">
+          <h2 className="text-4xl md:text-5xl font-dm-serif font-bold text-accent mb-4">
             {SECTIONS.products.title}
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -77,7 +77,7 @@ export default function Products() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 </div>
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-inter font-bold text-accent mb-3">
+                  <h3 className="text-2xl font-dm-serif font-bold text-accent mb-3">
                     {product.nameKa}
                   </h3>
                   <p className="text-muted-foreground mb-4 leading-relaxed">

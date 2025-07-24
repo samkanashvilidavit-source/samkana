@@ -23,7 +23,7 @@ export default function Hero() {
         <div className="max-w-2xl">
           {/* Glass box for text content */}
           <div className="glass-box-dark rounded-2xl p-8 md:p-12">
-            <h1 className="text-5xl md:text-6xl font-inter font-bold text-white mb-4 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-dm-serif font-bold text-white mb-4 leading-tight">
               {HERO_CONTENT.title}<br />
               <span className="text-secondary">{HERO_CONTENT.subtitle}</span>
             </h1>
@@ -40,7 +40,7 @@ export default function Hero() {
             
             <Button
               onClick={scrollToContact}
-              className="bg-secondary hover:bg-primary text-white px-8 py-4 rounded-full font-inter font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="bg-secondary hover:bg-primary text-white px-8 py-4 rounded-full font-dm-serif font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
               size="lg"
             >
               {HERO_CONTENT.cta}

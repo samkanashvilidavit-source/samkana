@@ -7,6 +7,7 @@ This is a full-stack web application for Chococu, a Georgian chocolate cafe. The
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Typography: DM Serif Display font family used throughout the entire project for elegant, serif typography.
 
 ## System Architecture
 

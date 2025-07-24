@@ -17,7 +17,7 @@ export default function Gallery() {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-inter font-bold text-accent mb-4">
+          <h2 className="text-4xl md:text-5xl font-dm-serif font-bold text-accent mb-4">
             {SECTIONS.gallery.title}
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

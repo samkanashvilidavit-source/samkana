@@ -27,7 +27,7 @@ export default function Footer() {
                 <Cookie className="text-white text-xl" />
               </div>
               <div>
-                <h3 className="font-inter font-bold text-2xl">{SITE_NAME}</h3>
+                <h3 className="font-dm-serif font-bold text-2xl">{SITE_NAME}</h3>
                 <p className="text-sm text-neutral font-light">{SITE_TAGLINE}</p>
               </div>
             </div>
@@ -39,7 +39,7 @@ export default function Footer() {
           
           {/* Quick Links */}
           <div>
-            <h4 className="font-inter font-semibold text-lg mb-6">სწრაფი ლინკები</h4>
+            <h4 className="font-dm-serif font-semibold text-lg mb-6">სწრაფი ლინკები</h4>
             <ul className="space-y-3">
               {NAVIGATION_ITEMS.map((item) => (
                 <li key={item.id}>
@@ -56,7 +56,7 @@ export default function Footer() {
           
           {/* Products */}
           <div>
-            <h4 className="font-inter font-semibold text-lg mb-6">პროდუქტები</h4>
+            <h4 className="font-dm-serif font-semibold text-lg mb-6">პროდუქტები</h4>
             <ul className="space-y-3">
               <li><button className="text-neutral hover:text-secondary transition-colors">შოკოლადის ბუკეტები</button></li>
               <li><button className="text-neutral hover:text-secondary transition-colors">პერსონალიზებული შოკოლადი</button></li>
@@ -67,7 +67,7 @@ export default function Footer() {
           
           {/* Contact Info */}
           <div>
-            <h4 className="font-inter font-semibold text-lg mb-6">საკონტაქტო ინფორმაცია</h4>
+            <h4 className="font-dm-serif font-semibold text-lg mb-6">საკონტაქტო ინფორმაცია</h4>
             <div className="space-y-3">
               <p className="text-neutral flex items-center">
                 <MapPin className="mr-2 text-secondary w-4 h-4" />
