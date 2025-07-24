@@ -88,7 +88,7 @@ export default function Contact() {
           
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
-            <Card className="shadow-2xl">
+            <Card className="shadow-2xl order-1 lg:order-1">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-dm-serif font-bold text-accent mb-6">
                   შეკითხვები და შეკვეთები
@@ -184,10 +184,10 @@ export default function Contact() {
             </Card>
             
             {/* Contact Information */}
-            <div className="space-y-8">
-              <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+            <div className="order-2 lg:order-2">
+              <Card className="bg-accent/90 backdrop-blur-sm border-white/20 shadow-2xl">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-dm-serif font-bold text-white mb-6">
+                  <h3 className="text-2xl font-dm-serif font-bold text-white mb-8 text-center">
                     ჩვენი მისამართი
                   </h3>
                   
@@ -204,15 +204,15 @@ export default function Contact() {
                       ))}
                     </div>
                   ) : (
-                    <div className="space-y-6">
+                    <div className="space-y-8">
                       <div className="flex items-start space-x-4">
                         <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
                           <MapPin className="text-white w-5 h-5" />
                         </div>
                         <div>
-                          <h4 className="font-dm-serif font-semibold text-white mb-1">მისამართი</h4>
-                          <p className="text-neutral">
-                            {cafeInfo?.addressKa || "რუსთაველის გამზირი 123\nთბილისი 0108, საქართველო"}
+                          <h4 className="font-dm-serif font-semibold text-white mb-2">მისამართი</h4>
+                          <p className="text-neutral leading-relaxed">
+                            {cafeInfo?.addressKa || "რუსთაველის გამზირი 123, თბილისი 0108, საქართველო"}
                           </p>
                         </div>
                       </div>
@@ -222,7 +222,7 @@ export default function Contact() {
                           <Mail className="text-white w-5 h-5" />
                         </div>
                         <div>
-                          <h4 className="font-dm-serif font-semibold text-white mb-1">ელ. ფოსტა</h4>
+                          <h4 className="font-dm-serif font-semibold text-white mb-2">ელ. ფოსტა</h4>
                           <p className="text-neutral">{cafeInfo?.email || "info@chococu.ge"}</p>
                         </div>
                       </div>
@@ -232,7 +232,7 @@ export default function Contact() {
                           <Phone className="text-white w-5 h-5" />
                         </div>
                         <div>
-                          <h4 className="font-dm-serif font-semibold text-white mb-1">ტელეფონი</h4>
+                          <h4 className="font-dm-serif font-semibold text-white mb-2">ტელეფონი</h4>
                           <p className="text-neutral">{cafeInfo?.phone || "+995 322 12 34 56"}</p>
                         </div>
                       </div>
@@ -242,17 +242,21 @@ export default function Contact() {
                           <Clock className="text-white w-5 h-5" />
                         </div>
                         <div>
-                          <h4 className="font-dm-serif font-semibold text-white mb-1">სამუშაო საათები</h4>
+                          <h4 className="font-dm-serif font-semibold text-white mb-2">სამუშაო საათები</h4>
                           <div className="text-neutral space-y-1">
                             {cafeInfo?.hoursKa ? (
                               Object.entries(parseHours(cafeInfo.hoursKa)).map(([day, hours]) => (
-                                <p key={day}>{day}: {hours as string}</p>
+                                <p key={day} className="leading-relaxed">{day}: {hours as string}</p>
                               ))
                             ) : (
                               <>
-                                <p>ორშ - ხუთ: 8:00 - 22:00</p>
-                                <p>შაბ: 9:00 - 23:00</p>
-                                <p>კვი: 10:00 - 21:00</p>
+                                <p className="leading-relaxed">ორშაბათი: 8:00 - 22:00</p>
+                                <p className="leading-relaxed">სამშაბათი: 8:00 - 22:00</p>
+                                <p className="leading-relaxed">ოთხშაბათი: 8:00 - 22:00</p>
+                                <p className="leading-relaxed">ხუთშაბათი: 8:00 - 22:00</p>
+                                <p className="leading-relaxed">პარასკევი: 8:00 - 22:00</p>
+                                <p className="leading-relaxed">შაბათი: 9:00 - 23:00</p>
+                                <p className="leading-relaxed">კვირა: 10:00 - 21:00</p>
                               </>
                             )}
                           </div>
@@ -260,29 +264,6 @@ export default function Contact() {
                       </div>
                     </div>
                   )}
-                </CardContent>
-              </Card>
-              
-              {/* Social Media Links */}
-              <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-dm-serif font-bold text-white mb-6">
-                    გამოგვყევით
-                  </h3>
-                  <div className="flex space-x-4">
-                    <a 
-                      href="#" 
-                      className="w-12 h-12 bg-secondary hover:bg-white hover:text-primary rounded-full flex items-center justify-center transition-colors"
-                    >
-                      <Facebook className="w-5 h-5" />
-                    </a>
-                    <a 
-                      href="#" 
-                      className="w-12 h-12 bg-secondary hover:bg-white hover:text-primary rounded-full flex items-center justify-center transition-colors"
-                    >
-                      <Instagram className="w-5 h-5" />
-                    </a>
-                  </div>
                 </CardContent>
               </Card>
             </div>
