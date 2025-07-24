@@ -17,45 +17,55 @@ export default function About() {
   };
 
   return (
-    <section id="cafe" className="py-20 bg-gradient-warm">
-      <div className="container mx-auto px-6">
+    <section id="cafe" className="py-20 bg-gradient-warm relative">
+      {/* Background overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')`
+        }}
+      />
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-4xl md:text-5xl font-inter font-bold text-accent mb-8">
-              {SECTIONS.about.title}
-            </h2>
-            <div className="w-16 h-1 bg-secondary mb-8"></div>
-            
-            {isLoading ? (
-              <div className="space-y-4">
-                <Skeleton className="h-4 w-full" />
-                <Skeleton className="h-4 w-full" />
-                <Skeleton className="h-4 w-3/4" />
-                <Skeleton className="h-4 w-full" />
-                <Skeleton className="h-4 w-2/3" />
-                <Skeleton className="h-10 w-48 mt-8" />
-              </div>
-            ) : (
-              <>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                  Chococu-ში ჩვენ ვაერთიანებთ ყოველდღიურ კომფორტს და ინდულგენტობის სიამოვნებას. 
-                  თბილისის ისტორიულ ცენტრში მდებარე ჩვენი კაფე გთავაზობთ ხელნაკეთი სანდვიჩებისა 
-                  და სალათების უნიკალურ არჩევანს.
-                </p>
-                
-                <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                  {cafeInfo?.descriptionKa || SECTIONS.about.description}
-                </p>
-                
-                <Button 
-                  onClick={scrollToContact}
-                  className="bg-primary hover:bg-accent text-primary-foreground px-8 py-4 rounded-full font-inter font-semibold text-lg transition-colors"
-                  size="lg"
-                >
-                  დაგვიკავშირდით დღესვე!
-                </Button>
-              </>
-            )}
+            <div className="glass-card rounded-2xl p-8 md:p-10">
+              <h2 className="text-4xl md:text-5xl font-inter font-bold text-accent mb-8">
+                {SECTIONS.about.title}
+              </h2>
+              <div className="w-16 h-1 bg-secondary mb-8"></div>
+              
+              {isLoading ? (
+                <div className="space-y-4">
+                  <Skeleton className="h-4 w-full" />
+                  <Skeleton className="h-4 w-full" />
+                  <Skeleton className="h-4 w-3/4" />
+                  <Skeleton className="h-4 w-full" />
+                  <Skeleton className="h-4 w-2/3" />
+                  <Skeleton className="h-10 w-48 mt-8" />
+                </div>
+              ) : (
+                <>
+                  <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                    Chococu-ში ჩვენ ვაერთიანებთ ყოველდღიურ კომფორტს და ინდულგენტობის სიამოვნებას. 
+                    თბილისის ისტორიულ ცენტრში მდებარე ჩვენი კაფე გთავაზობთ ხელნაკეთი სანდვიჩებისა 
+                    და სალათების უნიკალურ არჩევანს.
+                  </p>
+                  
+                  <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+                    {cafeInfo?.descriptionKa || SECTIONS.about.description}
+                  </p>
+                  
+                  <Button 
+                    onClick={scrollToContact}
+                    className="bg-primary hover:bg-accent text-primary-foreground px-8 py-4 rounded-full font-inter font-semibold text-lg transition-colors shadow-lg"
+                    size="lg"
+                  >
+                    დაგვიკავშირდით დღესვე!
+                  </Button>
+                </>
+              )}
+            </div>
           </div>
           
           <div className="grid gap-6">

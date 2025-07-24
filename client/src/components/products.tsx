@@ -49,7 +49,7 @@ export default function Products() {
           {isLoading ? (
             // Loading skeletons
             Array.from({ length: 6 }).map((_, index) => (
-              <Card key={index} className="overflow-hidden">
+              <Card key={index} className="glass-card rounded-2xl overflow-hidden">
                 <Skeleton className="w-full h-64" />
                 <CardContent className="p-8">
                   <Skeleton className="h-6 w-3/4 mb-3" />
@@ -66,13 +66,16 @@ export default function Products() {
             products?.map((product) => (
               <Card 
                 key={product.id} 
-                className="bg-gradient-warm rounded-2xl shadow-lg overflow-hidden hover-scale group"
+                className="glass-card rounded-2xl shadow-lg overflow-hidden hover-scale group"
               >
-                <img 
-                  src={product.imageUrl} 
-                  alt={product.nameKa}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
-                />
+                <div className="relative">
+                  <img 
+                    src={product.imageUrl} 
+                    alt={product.nameKa}
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                </div>
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-inter font-bold text-accent mb-3">
                     {product.nameKa}
@@ -86,7 +89,7 @@ export default function Products() {
                     </span>
                     <Button 
                       onClick={scrollToContact}
-                      className="bg-primary text-primary-foreground hover:bg-accent transition-colors"
+                      className="bg-primary text-primary-foreground hover:bg-accent transition-colors shadow-lg"
                     >
                       შეკვეთა
                     </Button>

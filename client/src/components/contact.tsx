@@ -292,15 +292,32 @@ export default function Contact() {
 
       {/* Map Section */}
       <section className="py-0">
-        <div className="w-full h-96 bg-muted relative">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
-              <p className="text-muted-foreground font-inter">რუკა ითვირთება...</p>
-              <p className="text-sm text-muted-foreground mt-2">Google Maps ინტეგრაცია</p>
+        <div className="w-full h-96 relative">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.3176777771397!2d44.79886!3d41.69773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cd7e64f626b%3A0x61d084ede2576ea3!2sRustaveli%20Avenue%2C%20Tbilisi%2C%20Georgia!5e0!3m2!1sen!2sge!4v1647834567890!5m2!1sen!2sge"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Chococu Location Map"
+            className="w-full h-full"
+          />
+          
+          {/* Glass overlay with location info */}
+          <div className="absolute top-6 left-6 glass-card rounded-xl p-4 max-w-sm">
+            <div className="flex items-center space-x-3 mb-2">
+              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                <MapPin className="text-white w-4 h-4" />
+              </div>
+              <h4 className="font-inter font-bold text-accent">Chococu</h4>
             </div>
+            <p className="text-muted-foreground text-sm">
+              რუსთაველის გამზირი 123<br />
+              თბილისი 0108, საქართველო
+            </p>
           </div>
-          {/* Google Maps integration would go here */}
         </div>
       </section>
     </>
